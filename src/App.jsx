@@ -1,6 +1,8 @@
 //import { useState } from 'react'
 import './App.css'
+import EducationalExp from './components/Educational Experience'
 import GeneralInfo from './components/General Info'
+import PracticalExp from './components/Practical Experience'
 
 function App() {
   
@@ -10,8 +12,8 @@ function App() {
       <div className='all'>
         <div className='info'>
             <GeneralInfo />
-            <div>Educational Experiences</div>
-            <div>Practical Experiences</div>
+            <EducationalExp />
+            <PracticalExp />
         </div>
 
        <section>Main</section>
