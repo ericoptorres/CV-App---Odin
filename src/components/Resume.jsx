@@ -1,16 +1,26 @@
 import '../App.css'
 
-export default function Resume() {
+export default function Resume({experienceInfo}) {
 
 
-
+    
     return (
         <div className='resume'>
             <h3>Work Experience</h3>
-            <p>Company</p>
+            <hr></hr>
+            <div>            
+                <span>{experienceInfo.years}</span>
+                <span>{experienceInfo.company}</span>
+            </div>
+
 
             <h3>Education</h3>
-            <p>School</p>
+            <hr></hr>
+            <div>
+                <span>{experienceInfo.date}</span>
+                <span>{experienceInfo.school}</span>
+            </div>
+
         </div>
     )
 }

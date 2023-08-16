@@ -1,22 +1,23 @@
 import '../App.css'
-import {useState} from 'react'
 import picture from '../assets/test.jpg'
 
-export default function Card (){
 
-    const [selectedImage, setSelectedImage] = useState(null)
-
-
+export default function Card (props){
+    //let url = props.url ? props.url : picture
+    
     return (
         <div className='card'>
-            <img src={selectedImage ? selectedImage : picture} alt="not found" className='icon'/>
-            <h4>Full Name</h4>
+
+            <img src={picture} className='icon'></img>
+            <h4>{props.personalInfo.firstName}</h4>
+            <h4>{props.personalInfo.lastName}</h4>
             <hr></hr>
-            <p>Software Developer</p>
+
+            {props.personalInfo.degree || <p>Software Developer</p>}
             <h5>Contact</h5>
             <hr></hr>
-            <p>phone </p>
-            <p>email</p>
+            <p>{props.personalInfo.phone}</p>
+            <p>{props.personalInfo.email}</p>
          </div>
     )
 }
